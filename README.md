@@ -1,5 +1,5 @@
 # easylog
-A .net standard 2.0 library which logs in files in c:\temp with the name of the calling as assembly as the name of file. Created because of the need of a simple loging while putting products into production, reducing doubts about configuration and whether other systems are running.
+A .net standard 2.0 library which logs in files and places them in c:\temp. The front of the filename becomes the name of the calling assembly and the extension is .log. Created because of the need of a simple file logging, while putting products into production, reducing doubts about correct configuration and whether other systems are running properly and are configured correctly.
 
 Can be installed by calling:
-Install-Package ChristiAndersen.Easylog -Version 1.0.0
+Install-Package ChristiAndersen.Easylog
