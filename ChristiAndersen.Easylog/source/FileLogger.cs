@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Pvs.EasyflowExtensions.Dispatch.EasyLog
+namespace ChristiAndersen.EasyLog
 {
     public class FileLogger : LogBase
     {
