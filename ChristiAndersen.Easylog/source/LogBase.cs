@@ -1,4 +1,4 @@
-﻿namespace Pvs.EasyflowExtensions.Dispatch.EasyLog
+﻿namespace ChristiAndersen.EasyLog
 {
     public abstract class LogBase
     {
