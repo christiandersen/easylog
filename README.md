@@ -4,14 +4,19 @@ A .NET Standard 2.0 library filelogger which logs in files and places them in c:
 There is defined 3 log levels: Debug, Information and Error.
 
 Can be installed by calling:
-Install-Package ChristiAndersen.Easylog
+```
+Install-Package EasyLog
+```
 
 When added to your project, you can write the below using statement and start logging.
 
-using ChristiAndersen.EasyLog;
+```
+using EasyLog;
+```
 
 And then it is ready to log like this in your code:
 
+```
   Log.Information("Write some log information to the file");
   
   Log.Debug("Write some "¤#()"#¤=(" debug information to the file");
@@ -19,9 +24,9 @@ And then it is ready to log like this in your code:
   Log.Error("Write some error information to the file");
   
   Log.Information("Write some more log information ot the file");
-  
+```
 The file output will be:
-
+```
   2019-11-13 14:11:23.033 [Information] Write some log information to the file
   
   2019-11-13 14:11:23.036 [Debug] Write some "¤#()"#¤=(" debug information to the file
@@ -29,3 +34,4 @@ The file output will be:
   2019-11-13 14:11:23.036 [Error] Write some error information to the file
   
   2019-11-13 14:11:23.037 [Information] Write some more log information ot the file
+```

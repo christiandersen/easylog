@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace ChristiAndersen.EasyLog
+namespace EasyLog
 {
     public class FileLogger : LogBase
     {

@@ -1,4 +1,4 @@
-﻿namespace ChristiAndersen.EasyLog
+﻿namespace EasyLog
 {
     public abstract class LogBase
     {
