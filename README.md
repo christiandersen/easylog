@@ -5,13 +5,13 @@ There is defined 3 log levels: Debug, Information and Error.
 
 Can be installed by calling:
 ```
-Install-Package EasyLog
+Install-Package ChristiAndersen.EasyLog
 ```
 
 When added to your project, you can write the below using statement and start logging.
 
 ```
-using EasyLog;
+using ChristiAndersen.EasyLog;
 ```
 
 And then it is ready to log like this in your code:
