@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>ChristiAndersen.dk</Authors>
     <Product>EasyLog</Product>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>EasyLog.snk</AssemblyOriginatorKeyFile>
@@ -14,7 +13,6 @@
     <Description>A .NET Standard 2.0 library filelogger which logs in files and places them in c:\temp. The naming of the file is the name of the calling assembly with the extension log. Created because of the need of simple file logging, while putting products into production, to reduce doubts about correct configuration and whether other systems are running properly and are configured correctly.</Description>
     <PackageId>ChristiAndersen.EasyLog</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>Logging, C#, .NET Standard 2.0, .NET Core, Filelogging</PackageTags>
+    <PackageTags>Logging, C#, .NET Standard 2.0, .NET Core, File</PackageTags>
   </PropertyGroup>
-
 </Project>
