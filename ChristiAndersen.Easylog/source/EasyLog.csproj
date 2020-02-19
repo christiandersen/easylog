@@ -10,7 +10,7 @@
     <AssemblyOriginatorKeyFile>EasyLog.snk</AssemblyOriginatorKeyFile>
     <PackageProjectUrl>https://github.com/christiandersen/easylog</PackageProjectUrl>
     <RepositoryUrl>https://github.com/christiandersen/easylog.git</RepositoryUrl>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A .NET Standard 2.0 library filelogger which logs in files and places them in c:\temp. The naming of the file is the name of the calling assembly with the extension log. Created because of the need of simple file logging, while putting products into production, to reduce doubts about correct configuration and whether other systems are running properly and are configured correctly.</Description>
     <PackageId>ChristiAndersen.EasyLog</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
