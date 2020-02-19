@@ -9,9 +9,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - run: mkdir -p ChristiAndersen.Easylog/to/artifact
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
     - name: Build with dotnet
       run: dotnet build ChristiAndersen.Easylog/source/EasyLog.csproj --configuration Release
+    - run: mv *.nuget ChristiAndersen.Easylog/to/artifact
+    - uses: actions/upload-artifact@v1
+      with:
+        name: EasyLog.nuget
+        path: ChristiAndersen.Easylog/to/artifact
