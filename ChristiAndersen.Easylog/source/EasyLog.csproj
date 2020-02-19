@@ -7,7 +7,7 @@
     <Version>1.0.3</Version>
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
-    <AssemblyOriginatorKeyFile>EasyLog.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>EasyLog.snk</AssemblyOriginatorKeyFile>
     <PackageProjectUrl>https://github.com/christiandersen/easylog</PackageProjectUrl>
     <RepositoryUrl>https://github.com/christiandersen/easylog.git</RepositoryUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
