@@ -14,4 +14,4 @@ jobs:
       with:
         dotnet-version: 2.2.108
     - name: Build with dotnet
-      run: dotnet pack --configuration "./ChristiAndersen.Easylog/source/EasyLog.csproj"
+      run: dotnet pack --configuration ChristiAndersen.Easylog/source/EasyLog.csproj
