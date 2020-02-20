@@ -1,4 +1,5 @@
-﻿using System.IO;
+using System.IO;
+using System.Threading;
 
 namespace EasyLog
 {
@@ -9,7 +10,12 @@ namespace EasyLog
 
         private readonly bool append = true;
 
-        private string LogFilePath { get; } = Path.Combine(dropPath, System.Reflection.Assembly.GetExecutingAssembly().GetName().Name) + fileExtension;
+        private static ReaderWriterLockSlim readWriteLock = new ReaderWriterLockSlim();
+        
+        private string GetLogFilePath()
+        {
+            return Path.Combine(dropPath, System.Reflection.Assembly.GetExecutingAssembly().GetName().Name) + fileExtension;
+        }
 
         public override void Write(string message)
         {
@@ -18,13 +24,18 @@ namespace EasyLog
                 return;
             }
 
-            lock (lockObject)
+            readWriteLock.EnterWriteLock();
+            try
             {
-                using (StreamWriter streamWriter = new StreamWriter(LogFilePath,append, System.Text.Encoding.UTF8))
-                {
-                    streamWriter.WriteLine(message);
-                    streamWriter.Close();
-                }
+                    using (StreamWriter streamWriter = new StreamWriter(GetLogFilePath(), append, System.Text.Encoding.UTF8))
+                    {
+                        streamWriter.WriteLine(message);
+                        streamWriter.Close();
+                    }
+            }
+            finally 
+            {
+                readWriteLock.ExitWriteLock();
             }
         }
     }
