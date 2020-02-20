@@ -16,7 +16,7 @@ jobs:
         dotnet-version: 2.2.108
     - name: Build with dotnet
       run: dotnet build ChristiAndersen.Easylog/source/EasyLog.csproj --configuration Release
-    - run: mv ChristiAndersen.Easylog/source/bin/Release/ChristiAndersen.EasyLog.1.0.5.nupkg ChristiAndersen.Easylog/to/artifact
+    - run: mv ChristiAndersen.Easylog/source/bin/Release/*.nupkg ChristiAndersen.Easylog/to/artifact
     - uses: actions/upload-artifact@v1
       with:
         name: EasyLog.nuget
