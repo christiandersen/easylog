@@ -21,3 +21,8 @@ jobs:
       with:
         name: EasyLog.nuget
         path: ChristiAndersen.Easylog/to/artifact
+    - name: publish on version change
+      uses: rohith/publish-nuget@v2
+      with:
+        PROJECT_FILE_PATH: ChristiAndersen.Easylog/source/EasyLog.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}  
