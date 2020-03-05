@@ -14,7 +14,9 @@ namespace EasyLog
         
         private string GetLogFilePath()
         {
-            return Path.Combine(dropPath, System.Reflection.Assembly.GetExecutingAssembly().GetName().Name) + fileExtension;
+            return Path.Combine(dropPath, System.Reflection.Assembly.GetEntryAssembly().GetName().Name) + 
+                                          System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString() + 
+                                          fileExtension;
         }
 
         public override void Write(string message)
